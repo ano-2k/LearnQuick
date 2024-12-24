@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "381963108332",
+    "project_id": "learnquick-c9517",
+    "storage_bucket": "learnquick-c9517.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381963108332:android:1a740658c540d38655cac9",
+        "android_client_info": {
+          "package_name": "com.example.learnquick"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK6SGXG9tYMiaazT_z3fxeSHZPNusepf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

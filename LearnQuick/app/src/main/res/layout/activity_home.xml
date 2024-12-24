@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="8dp"
+    tools:context=".HomeActivity">
+
+    <!-- Screen Border -->
+    <LinearLayout
+        android:id="@+id/centerContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/layout_border"
+        android:padding="16dp">
+
+        <!-- Main Content -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="8dp">
+
+            <!-- Topic Input Field -->
+            <EditText
+                android:id="@+id/topicEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Topic"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:background="@android:drawable/edit_text"
+                android:contentDescription="Input field for entering the topic"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/generateQuestionsButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <!-- Generate Questions Button -->
+            <Button
+                android:id="@+id/generateQuestionsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generate Questions"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Button to generate questions based on the entered topic"
+                app:layout_constraintTop_toBottomOf="@id/topicEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Motivation Coin Placeholder -->
+            <TextView
+                android:id="@+id/motivationCoinPlaceholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✨ Try and Fail but Never Fail to Try ✨"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Motivational message"
+                app:layout_constraintTop_toBottomOf="@id/generateQuestionsButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Scrollable Questions -->
+            <ScrollView
+                android:id="@+id/questionsScrollView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Scrollable area containing the questions"
+                app:layout_constraintTop_toBottomOf="@id/motivationCoinPlaceholder"
+                app:layout_constraintBottom_toTopOf="@id/submitButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/questionsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp" />
+            </ScrollView>
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Button to submit the answers"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</FrameLayout>
